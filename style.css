@@ -8,7 +8,7 @@ body{margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 .tagline{font-size:0.98rem;font-style:italic;color:#003366;font-weight:500;margin-left:8px;letter-spacing:.2px;}
 .header-right{display:flex;align-items:center;gap:18px;}
 .lang-select{color:#222;font-size:.98rem;background:transparent;border:none;outline:none;cursor:pointer;}
-.nav{background:#111;color:#fff;display:flex;align-items:center;justify-content:center;gap:32px;font-size:1.08rem;font-weight:500;min-height:44px;position:relative;z-index:9;}
+.nav{background:#111;color:#fff;display:flex;align-items:center;justify-content:center;gap:32px;font-size:1.08rem;font-weight:500;min-height:44px;position:relative;z-index:9;flex-wrap:wrap;}
 .nav-item{padding:0 10px;cursor:pointer;position:relative;transition:background 0.2s,border-radius 0.2s;}
 .nav-item:after{content:'';display:block;width:0;height:2px;background:#003366;transition:.3s;width:0;position:absolute;bottom:-2px;left:0;}
 .nav-item:hover:after{width:100%;}
@@ -29,8 +29,26 @@ body{margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 .slider-arrow.left{left:18px;}
 .slider-arrow.right{right:18px;}
 @media (max-width:1200px){.main-content,.slider-container{max-width:98vw;}}
-@media (max-width:700px){.slider-container{aspect-ratio:16/10;}.header{padding:0 8px 0 8px;}}
-@media (max-width:400px){.main-content{padding:0;}}
+@media (max-width:900px){
+  .main-content, .slider-container {max-width:100vw;}
+  .gallery-grid {gap: 12px;}
+  .gallery-card {width: 45vw; min-width: 160px;}
+}
+@media (max-width:700px){
+  .slider-container{aspect-ratio:16/10;}
+  .header{padding:0 8px 0 8px;}
+  .nav{font-size:0.95rem;gap:10px;}
+  .gallery-card {width: 90vw;}
+}
+@media (max-width:500px){
+  .main-content{padding:0;}
+  .events-section{padding:18px 0 24px 0;}
+  .events-title{font-size:1.1rem;}
+  .event-title{font-size:.98rem;}
+  .gallery-section { padding: 10px 0 18px 0; }
+  .gallery-title { font-size: 1rem; }
+  .gallery-card { width: 98vw; }
+}
 .modal-overlay{display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.35);z-index:100;align-items:center;justify-content:center;}
 .modal-overlay.active{display:flex;}
 .result-modal-card{background:#fff;border-radius:12px;box-shadow:0 2px 16px rgba(44,62,80,0.18);padding:22px 22px 16px 22px;width:100%;max-width:370px;display:flex;flex-direction:column;align-items:flex-start;animation:fadeIn 0.7s;border:1.5px solid #003366;position:relative;z-index:2;transition:box-shadow 0.4s,transform 0.4s;}
@@ -56,11 +74,6 @@ body{margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 .event-card{flex:1 1 0;min-width:0;padding:0 18px;box-sizing:border-box;text-align:left;}
 .event-date{font-size:1rem;color:#666;margin-bottom:7px;margin-top:0;}
 .event-title{font-size:1.25rem;font-weight:600;color:#111;line-height:1.3;}
-@media (max-width:900px){.events-slider{max-width:98vw;}.event-card{padding:0 8px;}}
-@media (max-width:700px){.events-title{font-size:1.3rem;}.event-title{font-size:1.05rem;}.event-card{padding:0 2vw;}}
-@media (max-width:500px){.events-section{padding:18px 0 24px 0;}.events-title{font-size:1.1rem;}.event-title{font-size:.98rem;}}
-.dev-msg-card{position:fixed;bottom:32px;left:50%;transform:translateX(-50%);background:#fff;color:#003366;padding:16px 32px;border-radius:10px;box-shadow:0 2px 16px rgba(44,62,80,0.13);font-size:1.08rem;font-weight:500;z-index:9999;opacity:0;pointer-events:none;transition:opacity 0.4s;}
-.dev-msg-card.show{opacity:1;pointer-events:auto;}
 /* Gallery Section */
 .gallery-section {
   background: #fff;
@@ -107,10 +120,10 @@ body{margin:0;padding:0;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
 }
 @media (max-width: 900px) {
   .gallery-grid { gap: 12px; }
-  .gallery-card { width: 45vw; min-width: 180px; }
+  .gallery-card { width: 45vw; min-width: 160px; }
 }
 @media (max-width: 600px) {
   .gallery-card { width: 98vw; }
-  .gallery-section { padding: 18px 0 24px 0; }
+  .gallery-section { padding: 10px 0 18px 0; }
   .gallery-title { font-size: 1.2rem; }
 }
