@@ -1,147 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Media Computer College - 5th Semester Results</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src ='myscript.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मीडिया कंप्यूटर एजुकेशन</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Simplified floating shapes -->
-    <div class="shape shape1"></div>
-    <div class="shape shape2"></div>
-
-    <div class="container">
-        <h1>Media Computer College</h1>
-        
-        <div id="homePage" class="home-page">
-            <h2>Student Information Portal</h2>
-            <div class="semester-info">5th Semester Results</div>
-            <div class="search-container">
-                <input type="text" id="nameSearch" placeholder="Enter student name...">
-                <button onclick="searchByName()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>
-                    Search
-                </button>
-            </div>
-
-            <div class="action-buttons">
-                <button class="add-student-btn" onclick="openAddStudentModal()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                        <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
-                    </svg>
-                    Add New Student
-                </button>
-            </div>
-
-            <!-- Simplified educational icons -->
-            <div class="education-icons">
-                <div class="icon-box">
-                    <div class="icon">📊</div>
-                    <div class="icon-text">Results</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon">📝</div>
-                    <div class="icon-text">Grades</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon">🎓</div>
-                    <div class="icon-text">Students</div>
-                </div>
-                <div class="icon-box">
-                    <div class="icon">📚</div>
-                    <div class="icon-text">Courses</div>
-                </div>
-            </div>
-        </div>
-        
-        <div id="resultsPage" class="results-page">
-            <button class="back-button" onclick="goBack()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                </svg>
-                Back to Search
-            </button>
-            
-            <div id="studentInfo" class="student-info">
-                <h2>Student Details</h2>
-                <div class="info-grid">
-                    <p><strong>Name:</strong> <span id="infoName"></span></p>
-                    <p><strong>Roll No:</strong> <span id="infoRollNo"></span></p>
-                    <p><strong>Enrollment No:</strong> <span id="infoEnrollNo"></span></p>
-                    <p><strong>SGPA:</strong> <span id="infoSGPA"></span></p>
-                    <p><strong>Total Marks:</strong> <span id="infoMarks"></span></p>
-                    <p><strong>Result:</strong> <span id="infoResult"></span></p>
-                    <p><strong>Semester:</strong> <span id="infoSemester">5th</span></p>
-                </div>
-            </div>
-            
-            <table id="studentsTable">
-                <thead>
-                    <tr>
-                        <th>ROLL NO</th>
-                        <th>ENROLL NO</th>
-                        <th>NAME</th>
-                        <th>TOTAL CP Obtn/CR</th>
-                        <th>SGPA</th>
-                        <th>RESULT</th>
-                        <th>ACTION</th>
-                    </tr>
-                </thead>
-                <tbody id="studentsBody">
-                    <!-- Table data will be populated by JavaScript -->
-                </tbody>
-            </table>
-        </div>
+  <div class="header">
+    <div class="header-left">
+      <svg class="logo-svg" width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="48" stroke="#0D47A1" stroke-width="2" fill="#ffffff"/><text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="Georgia, serif" font-size="36" font-weight="bold" fill="#0D47A1">M</text><defs><path id="bottomArc" d="M 20,65 A 30,30 0 0,0 80,65" /></defs><text font-family="'Noto Sans Devanagari', sans-serif" font-size="10.5" fill="#0D47A1"><textPath href="#bottomArc" startOffset="50%" text-anchor="middle">शिक्षा सार्वव्यापी</textPath></text></svg>
+      <div class="inst-names">
+        <div class="inst-hindi">मीडिया कंप्यूटर एजुकेशन</div>
+        <div class="inst-eng">Media Computer Education <span class="tagline">(Superiority in Technology)</span></div>
+      </div>
     </div>
-
-    <!-- Add Student Modal -->
-    <div id="addStudentModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Add New Student</h2>
-                <span class="close-btn" onclick="closeAddStudentModal()">&times;</span>
-            </div>
-            <form id="addStudentForm">
-                <div class="form-group">
-                    <label for="studentName">Student Name</label>
-                    <input type="text" class="form-control" id="studentName" required>
-                </div>
-                <div class="form-group">
-                    <label for="rollNo">Roll Number</label>
-                    <input type="text" class="form-control" id="rollNo" required>
-                </div>
-                <div class="form-group">
-                    <label for="enrollNo">Enrollment Number</label>
-                    <input type="text" class="form-control" id="enrollNo" required>
-                </div>
-                <div class="form-group">
-                    <label for="totalMarks">Total Marks (format: xxx/30)</label>
-                    <input type="text" class="form-control" id="totalMarks" required>
-                </div>
-                <div class="form-group">
-                    <label for="sgpa">SGPA</label>
-                    <input type="text" class="form-control" id="sgpa" required>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn-secondary" onclick="closeAddStudentModal()">Cancel</button>
-                    <button type="submit" class="btn-primary">Add Student</button>
-                </div>
-            </form>
-        </div>
+    <div class="header-right">
+      <select class="lang-select">
+        <option>English</option>
+        <option>हिन्दी</option>
+      </select>
     </div>
-
-    <!-- Success Notification -->
-    <div id="notification" class="notification">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-        </svg>
-        <span id="notificationMessage">Student added successfully!</span>
+  </div>
+  <div class="nav">
+    <div class="nav-item" onclick="showDevMsg()">About</div>
+    <div class="nav-item" onclick="showDevMsg()">Divisions</div>
+    <div class="nav-item" onclick="showDevMsg()">Academics</div>
+    <div class="nav-item" onclick="showDevMsg()">Admissions</div>
+    <div class="nav-item" onclick="showDevMsg()">Research & Industry</div>
+    <div class="nav-item" onclick="showDevMsg()">Career</div>
+    <div class="nav-item view-result" onclick="showResultModal()">View Result</div>
+    <div class="nav-item" onclick="showDevMsg()">Contact Us</div>
+  </div>
+  <div class="ticker-bar">
+    <div class="ticker">Result Announced &nbsp;|&nbsp; Result Announced &nbsp;|&nbsp; Result Announced</div>
+  </div>
+  <div class="main-content">
+    <div class="slider-container" id="mainSlider">
+      <button class="slider-arrow left" onclick="slideMain(-1)">&lt;</button>
+      <img class="slider-img active" id="mainImgA" src="https://i.imgur.com/xxxxxxx.jpg">
+      <img class="slider-img slide-in" id="mainImgB" src="">
+      <div class="slider-caption" id="mainCap">Campus Main Gate</div>
+      <button class="slider-arrow right" onclick="slideMain(1)">&gt;</button>
     </div>
-
-    <script src="script.js"></script>
+    <div class="events-section">
+      <div class="events-title">Events Calendar</div>
+      <div class="events-slider">
+        <button class="event-arrow" onclick="slideEvents(-1)">&lt;</button>
+        <div class="events-list" id="eventsList"></div>
+        <button class="event-arrow" onclick="slideEvents(1)">&gt;</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal-overlay" id="resultModal">
+    <div class="result-modal-card" id="resultCard">
+      <span class="close-modal" onclick="closeResultModal()">&times;</span>
+      <div class="result-title">Result</div>
+      <div class="input-group">
+        <input type="text" id="nameInput" placeholder="Enter Student Name" maxlength="40">
+        <button onclick="showResult()">Show</button>
+      </div>
+      <div class="result-row"><b>Name:</b> <span id="studentName"></span></div>
+      <div class="result-row"><b>Roll No:</b> <span id="studentRoll"></span></div>
+      <div class="result-row"><b>Enroll No:</b> <span id="studentEnroll"></span></div>
+      <div class="result-row"><b>Marks/SGPA:</b> <span id="studentMarks"></span></div>
+      <div class="result-row"><b>Result:</b> <span id="studentResult"></span></div>
+    </div>
+  </div>
+  <div class="dev-msg-card" id="devMsgCard">website under development only results are available</div>
+  <script src="script.js"></script>
 </body>
 </html>
